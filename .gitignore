@@ -3,6 +3,7 @@ ChatServer/ChatServer/
 StatusServer/StatusServer/
 CServer/CServer
 VarifyServer/node_modules/
+Ldc_chatClient/build/
 # 忽略 .vs 目录（VS 配置文件）
 .vs/
 
