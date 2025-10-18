@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <IncludePath>D:\CppSoft\MVSC_libjson\include;D:\MSVC_Boost\x64\include;D:\CppSoft\mysql-connector-c++-8.3.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\MSVC_Boost\x64\lib;D:\CppSoft\MVSC_libjson\lib;D:\CppSoft\mysql-connector-c++-8.3.0\lib64\vs14;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\CppSoft\grpc\third_party\protobuf\src;D:\CppSoft\grpc\include;D:\CppSoft\grpc\third_party\abseil-cpp;D:\CppSoft\grpc\third_party\address_sorting\include;D:\CppSoft\grpc\third_party\re2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>D:\CppSoft\grpc\visualpro\third_party\cares\cares\lib\Debug;D:\CppSoft\grpc\visualpro\Debug;D:\CppSoft\grpc\visualpro\third_party\zlib\Debug;D:\CppSoft\grpc\visualpro\third_party\protobuf\Debug;D:\CppSoft\grpc\visualpro\third_party\abseil-cpp\absl\strings\Debug;D:\CppSoft\grpc\visualpro\third_party\abseil-cpp\absl\base\Debug;D:\CppSoft\grpc\visualpro\third_party\abseil-cpp\absl\time\Debug;D:\CppSoft\grpc\visualpro\third_party\boringssl-with-bazel\Debug;D:\CppSoft\grpc\visualpro\third_party\abseil-cpp\absl\numeric\Debug;D:\CppSoft\grpc\visualpro\third_party\abseil-cpp\absl\hash\Debug;D:\CppSoft\grpc\visualpro\third_party\abseil-cpp\absl\container\Debug;D:\CppSoft\grpc\visualpro\third_party\abseil-cpp\absl\debugging\Debug;D:\CppSoft\grpc\visualpro\third_party\abseil-cpp\absl\flags\Debug;D:\CppSoft\grpc\visualpro\third_party\abseil-cpp\absl\random\Debug;D:\CppSoft\grpc\visualpro\third_party\abseil-cpp\absl\status\Debug;D:\CppSoft\grpc\visualpro\third_party\abseil-cpp\absl\synchronization\Debug;D:\CppSoft\grpc\visualpro\third_party\abseil-cpp\absl\types\Debug;D:\CppSoft\grpc\visualpro\third_party\re2\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>
