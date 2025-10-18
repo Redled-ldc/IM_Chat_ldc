@@ -1,0 +1,14 @@
+# 忽略 ChatServer 目录及其所有内容
+ChatServer/ChatServer/
+StatusServer/StatusServer/
+CServer/CServer
+
+# 忽略 .vs 目录（VS 配置文件）
+.vs/
+
+# 忽略 x64 目录（编译产物）
+x64/
+
+# 忽略特定类型文件（如编译生成的 .exe、.dll）
+*.exe
+*.dll
