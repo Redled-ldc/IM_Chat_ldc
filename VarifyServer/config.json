@@ -1,0 +1,16 @@
+{
+    "email": {
+        "user": "ldc20000101@163.com",
+        "pass": "XGrFt35HaCkZUiq3"
+    },
+    "mysql": {
+        "host": "39.99.154.53",
+        "port": 3306,
+        "password": "@Ldc1212"
+    },
+    "redis": {
+        "host": "81.68.86.146",
+        "port": 6380,
+        "password": "123456"
+    }
+}
