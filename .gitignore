@@ -2,7 +2,7 @@
 ChatServer/ChatServer/
 StatusServer/StatusServer/
 CServer/CServer
-
+VarifyServer/node_modules/
 # 忽略 .vs 目录（VS 配置文件）
 .vs/
 
