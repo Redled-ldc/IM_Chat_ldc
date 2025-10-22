@@ -1,6 +1,7 @@
 #include "tcpmgr.h"
 #include <QAbstractSocket>
 #include<QJsonDocument>
+#include "usermgr.h"
 //#include"global.h"
 TcpMgr::TcpMgr():_host(""),_port(0),_b_recv_pending(false),_message_id(0),_message_len(0)
 {
@@ -103,15 +104,15 @@ void TcpMgr::initHandlers()
             return;
         }
 
-        // auto uid = jsonObj["uid"].toInt();
-        // auto name = jsonObj["name"].toString();
-        // auto nick = jsonObj["nick"].toString();
-        // auto icon = jsonObj["icon"].toString();
-        // auto sex = jsonObj["sex"].toInt();
-        // auto user_info = std::make_shared<UserInfo>(uid, name, nick, icon, sex);
+        auto uid = jsonObj["uid"].toInt();
+        auto name = jsonObj["name"].toString();
+        auto nick = jsonObj["nick"].toString();
+        auto icon = jsonObj["icon"].toString();
+        auto sex = jsonObj["sex"].toInt();
+       auto user_info = std::make_shared<UserInfo>(uid, name, nick, icon, sex);
 
-        // UserMgr::GetInstance()->SetUserInfo(user_info);
-        // UserMgr::GetInstance()->SetToken(jsonObj["token"].toString());
+        UserMgr::GetInstance()->SetUserInfo(user_info);
+        UserMgr::GetInstance()->SetToken(jsonObj["token"].toString());
         // if(jsonObj.contains("apply_list")){
         //     UserMgr::GetInstance()->AppendApplyList(jsonObj["apply_list"].toArray());
         // }
