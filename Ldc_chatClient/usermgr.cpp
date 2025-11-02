@@ -1,7 +1,7 @@
 #include "usermgr.h"
 #include <QJsonArray>
 #include "tcpmgr.h"
-
+#include "global.h"
 UserMgr::~UserMgr()
 {
 
@@ -95,8 +95,8 @@ bool UserMgr::AlreadyApply(int uid)
 std::vector<std::shared_ptr<FriendInfo>> UserMgr::GetChatListPerPage() {
     
     std::vector<std::shared_ptr<FriendInfo>> friend_list;
-    int begin = _chat_loaded;
-    int end = begin + CHAT_COUNT_PER_PAGE;
+    size_t begin = _chat_loaded;
+    size_t end = begin + CHAT_COUNT_PER_PAGE;
 
     if (begin >= _friend_list.size()) {
         return friend_list;
@@ -115,8 +115,8 @@ std::vector<std::shared_ptr<FriendInfo>> UserMgr::GetChatListPerPage() {
 
 std::vector<std::shared_ptr<FriendInfo>> UserMgr::GetConListPerPage() {
     std::vector<std::shared_ptr<FriendInfo>> friend_list;
-    int begin = _contact_loaded;
-    int end = begin + CHAT_COUNT_PER_PAGE;
+    size_t begin = _contact_loaded;
+    size_t  end = begin + CHAT_COUNT_PER_PAGE;
 
     if (begin >= _friend_list.size()) {
         return friend_list;
@@ -157,8 +157,8 @@ bool UserMgr::IsLoadChatFin() {
 }
 
 void UserMgr::UpdateChatLoadedCount() {
-    int begin = _chat_loaded;
-    int end = begin + CHAT_COUNT_PER_PAGE;
+    size_t begin = _chat_loaded;
+    size_t end = begin + CHAT_COUNT_PER_PAGE;
 
     if (begin >= _friend_list.size()) {
         return ;
@@ -173,8 +173,8 @@ void UserMgr::UpdateChatLoadedCount() {
 }
 
 void UserMgr::UpdateContactLoadedCount() {
-    int begin = _contact_loaded;
-    int end = begin + CHAT_COUNT_PER_PAGE;
+    size_t begin = _contact_loaded;
+    size_t end = begin + CHAT_COUNT_PER_PAGE;
 
     if (begin >= _friend_list.size()) {
         return;

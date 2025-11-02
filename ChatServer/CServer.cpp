@@ -5,6 +5,7 @@
 CServer::CServer(boost::asio::io_context& io_context, short port):_io_context(io_context), _port(port),
 _acceptor(io_context, tcp::endpoint(tcp::v4(),port))
 {
+	//cout << "error/port" << endl;
 	cout << "Server start success, listen on port : " << _port << endl;
 	StartAccept();
 }

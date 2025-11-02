@@ -5,7 +5,7 @@
 #include <singleton.h>
 #include "userdata.h"
 #include <vector>
-#include "global.h"
+
 class UserMgr:public QObject,public Singleton<UserMgr>,
         public std::enable_shared_from_this<UserMgr>
 {
@@ -42,8 +42,8 @@ private:
     std::vector<std::shared_ptr<FriendInfo>> _friend_list;
     QMap<int, std::shared_ptr<FriendInfo>> _friend_map;
     QString _token;
-    int _chat_loaded;
-    int _contact_loaded;
+    size_t _chat_loaded;
+    size_t _contact_loaded;
 
 public slots:
     void SlotAddFriendRsp(std::shared_ptr<AuthRsp> rsp);

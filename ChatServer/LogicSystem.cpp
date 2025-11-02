@@ -166,7 +166,7 @@ void LogicSystem::LoginHandler(shared_ptr<CSession> session, const short &msg_id
 		rtvalue["friend_list"].append(obj);
 	}
 
-	auto server_name = ConfigMgr::Inst().GetValue("SelfServer", "Name");
+	auto server_name = ConfigMgr::Inst().GetValue("chatserver1", "Name");
 	//����¼��������
 	auto rd_res = RedisMgr::GetInstance()->HGet(LOGIN_COUNT, server_name);
 	int count = 0;

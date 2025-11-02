@@ -2,6 +2,7 @@
 #include "ConfigMgr.h"
 #include "const.h"
 #include "RedisMgr.h"
+
 #include <climits>
 
 std::string generate_unique_string() {
